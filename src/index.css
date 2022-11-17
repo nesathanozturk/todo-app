@@ -15,12 +15,14 @@
         width: 26.9rem;
         height: 3rem;
         margin: 0.5rem auto;
-        padding: 0.5rem;
+        padding: 0.7rem;
         font-size: 1.1rem;
         border-radius: 5px;
         cursor: pointer;
         outline: none;
         transition: 0.2s;
+        display: flex;
+        justify-content: space-between;
       }
 
     .done {
