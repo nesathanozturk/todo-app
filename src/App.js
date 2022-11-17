@@ -33,18 +33,18 @@ function App() {
 
   return (
     <div className="App m-0 p-0 h-screen list-none font-roboto text-white">
-      <div className="container flex justify-center items-center flex-col mt-6">
-        <h1 className='text-4xl font-extrabold tracking-widest'>Reactjs Todo App</h1>
+      <div className="container bg-white text-black p-4 flex justify-center items-center flex-col mt-6">
+        <h1 className='text-4xl font-extrabold tracking-widest uppercase'>Reactjs Todo App</h1>
         <form onSubmit={onFormSubmit}>
           <input 
           type="text" 
           value={newItem}
           placeholder="Add something to do"
           onChange={e => setNewItem(e.target.value)}
-          className='w-72 p-[0.62rem] border-0 rounded-lg mt-5 focus:outline-none placeholder:text-xl focus:text-black focus:font-bold focus:text-md tracking-wide' 
+          className='w-72 p-[0.62rem] border-gray-200 border-2 rounded-lg mt-5 tracking-wide focus:outline-none focus:text-black focus:text-md' 
           />
-          <button className='w-20 bg-orange-600 text-black mx-1 text-xl rounded-md p-[0.5rem]' onClick={() => addItem(newItem)}>Add</button>
-          <button className='w-20 bg-purple-700 mx-1 text-xl rounded-md p-[0.5rem]' onClick={() => clearItems()}>Clear</button>
+          <button className='w-20 bg-purple-700 text-white mx-1 text-xl rounded-md p-[0.5rem]' onClick={() => addItem(newItem)}>Add</button>
+          <button className='w-20 bg-purple-700 text-white mx-1 text-xl rounded-md p-[0.5rem]' onClick={() => clearItems()}>Clear</button>
           </form>
       </div>
       <div className="list-container">
