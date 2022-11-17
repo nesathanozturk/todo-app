@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './App.css';
 
 function App() {
   const [newItem, setNewItem] = useState("");
@@ -10,6 +9,9 @@ function App() {
   };
 
   const addItem = () => {
+    if (!newItem) {
+      alert("Add something to do!")
+    } else {
     setList([
       ...list,
       {
@@ -19,6 +21,7 @@ function App() {
       }
     ])
     setNewItem("");
+  }
   };
 
   const completed = id => {
@@ -64,6 +67,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
