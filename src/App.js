@@ -5,6 +5,10 @@ function App() {
   const [newItem, setNewItem] = useState("");
   const [list, setList] = useState([]);
 
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+  };
+
   const addItem = () => {
     setList([
       ...list,
@@ -27,24 +31,20 @@ function App() {
     setList(list.filter(item => !item.completed));
   };
 
-  const onFormSubmit = (e) => {
-    e.preventDefault();
-  }
-
   return (
-    <div className="App m-0 p-0 h-screen list-none font-roboto text-white">
-      <div className="container bg-white text-black p-4 flex justify-center items-center flex-col mt-6">
-        <h1 className='text-4xl font-extrabold tracking-widest uppercase'>Reactjs Todo App</h1>
+    <div className="App m-0 p-0 h-screen list-none">
+      <div className="container bg-white w-2/4 mt-6 m-auto p-4 flex justify-center items-center flex-col rounded-lg">
+        <h1 className='text-4xl text-purple-500 font-bold tracking-widest'>Reactjs Todo App</h1>
         <form onSubmit={onFormSubmit}>
           <input 
           type="text" 
           value={newItem}
-          placeholder="Add something to do"
+          placeholder="Add something to do..."
           onChange={e => setNewItem(e.target.value)}
-          className='w-72 p-[0.62rem] border-gray-200 border-2 rounded-lg mt-5 tracking-wide focus:outline-none focus:text-black focus:text-md' 
+          className='w-72 p-[0.5rem] mr-2 mt-5 border-2 border-gray-200 rounded-lg placeholder:tracking-widest placeholder:text-lg focus:outline-none focus:text-gray-800 focus:text-md' 
           />
-          <button className='w-20 bg-purple-700 text-white mx-1 text-xl rounded-md p-[0.5rem]' onClick={() => addItem(newItem)}>Add</button>
-          <button className='w-20 bg-purple-700 text-white mx-1 text-xl rounded-md p-[0.5rem]' onClick={() => clearItems()}>Clear</button>
+          <button className='w-20 bg-purple-700 text-white mr-2 p-[0.45rem] text-xl rounded-md hover:bg-purple-900' onClick={() => addItem(newItem)}>Add</button>
+          <button className='w-20 bg-purple-700 text-white p-[0.45rem] text-xl rounded-md hover:bg-purple-900 transition:color' onClick={() => clearItems()}>Clear</button>
           </form>
       </div>
       <div className="list-container">
