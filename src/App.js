@@ -6,7 +6,7 @@ function App() {
   const [newItem, setNewItem] = useState("");
   const [list, setList] = useState([]);
 
-  const onFormSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
   };
 
@@ -45,7 +45,7 @@ function App() {
     <div className="App m-0 p-0 h-screen list-none font-poppins">
       <div className="container bg-white w-2/4 mt-6 m-auto p-5 flex justify-center items-center flex-col rounded-lg">
         <h1 className='text-4xl text-purple-500 font-bold tracking-widest'>My Todo List</h1>
-        <form onSubmit={onFormSubmit}>
+        <form onSubmit={handleSubmit}>
           <input 
           type="text" 
           value={newItem}
@@ -66,8 +66,8 @@ function App() {
               className={item.completed ? "done" : ""} 
               >
                 {item.name}
-                <button className="mr-1 text-red-600" onClick={() => removeItem(item.id)}><AiFillDelete /></button>
-                <button className="mr-1 text-green-500" onClick={() => isCompleted(item.id)}><AiFillCheckCircle /></button>
+                <button className="ml-auto text-purple-600 mr-1 text-xl" onClick={() => isCompleted(item.id)}><AiFillCheckCircle /></button>
+                <button className="mr-1 text-red-600 text-xl" onClick={() => removeItem(item.id)}><AiFillDelete /></button>
              </li>
             )
           })
