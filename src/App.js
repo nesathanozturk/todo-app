@@ -35,7 +35,7 @@ function App() {
   };
 
   return (
-    <div className="App m-0 p-0 h-screen list-none">
+    <div className="App m-0 p-0 h-screen list-none font-poppins">
       <div className="container bg-white w-2/4 mt-6 m-auto p-4 flex justify-center items-center flex-col rounded-lg">
         <h1 className='text-4xl text-purple-500 font-bold tracking-widest'>Reactjs Todo App</h1>
         <form onSubmit={onFormSubmit}>
