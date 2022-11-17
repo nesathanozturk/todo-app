@@ -17,7 +17,7 @@ function App() {
       {
         id: Math.random(),
         name: newItem,
-        completed: false
+        completed: false,
       }
     ])
     setNewItem("");
@@ -31,13 +31,13 @@ function App() {
   };
 
   const clearItems = () => {
-    setList(list.filter(item => !item.completed));
+    setList(list.filter(item => item.completed && !item.completed));
   };
 
   return (
     <div className="App m-0 p-0 h-screen list-none font-poppins">
       <div className="container bg-white w-2/4 mt-6 m-auto p-4 flex justify-center items-center flex-col rounded-lg">
-        <h1 className='text-4xl text-purple-500 font-bold tracking-widest'>Reactjs Todo App</h1>
+        <h1 className='text-4xl text-purple-500 font-bold tracking-widest'>My Todo List</h1>
         <form onSubmit={onFormSubmit}>
           <input 
           type="text" 
@@ -57,7 +57,7 @@ function App() {
               <li 
               key={item.id} 
               onClick={() => completed(item.id)}
-              className={item.completed ? "checked" : ""} 
+              className={item.completed ? "done" : ""} 
               >
                 {item.name}
              </li>
