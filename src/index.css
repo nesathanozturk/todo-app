@@ -5,24 +5,25 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
-     body {
-      background-image: linear-gradient(to right, #89349b, #892aad, #8420c0, #7a17d5, #6712eb);      }
+      body {
+        background-image: linear-gradient(to right, #89349b, #892aad, #8420c0, #7a17d5, #6712eb);     
+      }
+
       li {
         background-color: #fff;
-        color: #000;
+        color: rgb(28, 27, 27);
         width: 26.9rem;
         height: 3rem;
-        margin: auto;
+        margin: 0.5rem auto;
         padding: 0.5rem;
-        font-size: 1.3rem;
-        font-weight: 300;
-        border-bottom: 1px solid rgb(165, 160, 160);
+        font-size: 1.1rem;
+        border-radius: 5px;
         cursor: pointer;
         outline: none;
-        position: relative;
         transition: 0.2s;
       }
-    .checked {
+
+    .done {
         text-decoration: line-through;
         background-color: #1eb337;
         color: #fff; 
