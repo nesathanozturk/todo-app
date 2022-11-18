@@ -13,7 +13,7 @@ function App() {
   const addItem = () => {
     if (!newItem) {
       alert("Add something to do!")
-    } else {
+    }
     setList([
       ...list,
       {
@@ -23,7 +23,6 @@ function App() {
       }
     ])
     setNewItem("");
-  }
   };
 
   const clearItems = () => {
