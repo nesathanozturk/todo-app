@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/nesathanozturk/todoapp/static/css/main.bced52a5.css",
+    "main.js": "/nesathanozturk/todoapp/static/js/main.cd46c085.js",
+    "index.html": "/nesathanozturk/todoapp/index.html",
+    "main.bced52a5.css.map": "/nesathanozturk/todoapp/static/css/main.bced52a5.css.map",
+    "main.cd46c085.js.map": "/nesathanozturk/todoapp/static/js/main.cd46c085.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bced52a5.css",
+    "static/js/main.cd46c085.js"
+  ]
+}
