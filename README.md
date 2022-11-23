@@ -6,7 +6,6 @@
 <li>React</li>
 <li>Tailwind</li>
 
-<br>
 <h3>Installation</h3>
 
  `$ git clone https://github.com/nesathanozturk/todoapp.git`
