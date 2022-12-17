@@ -62,7 +62,7 @@ function Form() {
             Add
           </button>
           <button
-            className="w-20 bg-purple-700 text-white p-[0.45rem] text-base rounded-md hover:bg-purple-900"
+            className="w-20 bg-purple-700 text-white p-[0.45rem] text-base rounded-md hover:bg-purple-900 transition-colors"
             onClick={() => clearItems()}
           >
             Clear
