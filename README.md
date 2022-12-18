@@ -1,3 +1,5 @@
+<img src="/public/screenshot.png">
+
 <h1>About</h1>
 <p>This repository is my React Todo App project.<p>
 
