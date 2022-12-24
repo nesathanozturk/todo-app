@@ -1,7 +1,10 @@
+import useFormContext from "../hooks/use-form-context";
 import { AiFillDelete } from "react-icons/ai";
 import { AiFillCheckCircle } from "react-icons/ai";
 
-function List({ list, isCompleted, removeItem }) {
+function List() {
+  const { list, isCompleted, removeItem } = useFormContext();
+
   return (
     <div className="list-container">
       {list.map((item) => {

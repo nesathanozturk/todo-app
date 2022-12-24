@@ -1,44 +1,12 @@
 import { useState } from "react";
+import useFormContext from "../hooks/use-form-context";
 import List from "./List";
 
 function Form() {
-  const [newItem, setNewItem] = useState("");
-  const [list, setList] = useState([]);
+  const { newItem, setNewItem, addItem, clearItems } = useFormContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  };
-
-  const addItem = () => {
-    if (!newItem) {
-      alert("Add something to do!");
-    }
-    setList([
-      ...list,
-      {
-        id: Math.floor(Math.random() * 1000),
-        name: newItem,
-        completed: false,
-      },
-    ]);
-    setNewItem("");
-  };
-
-  const clearItems = () => {
-    setList(list.filter((item) => item.completed && !item.completed));
-  };
-
-  const isCompleted = (id) => {
-    setList(
-      list.map((liEl) =>
-        liEl.id === id ? { ...liEl, completed: !liEl.completed } : liEl
-      )
-    );
-  };
-
-  const removeItem = (id) => {
-    const newItems = list.filter((item) => item.id !== id);
-    setList(newItems);
   };
 
   return (
@@ -69,7 +37,7 @@ function Form() {
           </button>
         </form>
       </div>
-      <List list={list} isCompleted={isCompleted} removeItem={removeItem} />
+      <List />
     </div>
   );
 }

@@ -10,10 +10,10 @@
 
 <h3>Installation</h3>
 
- `$ git clone https://github.com/nesathanozturk/todoapp.git`
+`$ git clone https://github.com/nesathanozturk/todoapp.git`
 
- `$ cd todoapp`
- 
- `$ npm install `
- 
- `$ npm start`
+`$ cd todoapp`
+
+`$ npm install `
+
+`$ npm start`
